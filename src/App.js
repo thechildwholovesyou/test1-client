@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { render } from "@testing-library/react";
+import React from "react";
+import ReactDom from "react-dom";
+import Navbar from "./Navbar";
+import SearchComponent from "./SearchComponent";
+import Table from "./Table";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <div class="container">
+        <div class="row p-4 mt-4">
+          <div class="col">
+            <SearchComponent />
+          </div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        <Table />
+      </div>
+    </React.Fragment>
   );
 }
 
